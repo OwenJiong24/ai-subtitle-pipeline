@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+*.pyo
+.ok-build/
+work_*
+*.ass.bak

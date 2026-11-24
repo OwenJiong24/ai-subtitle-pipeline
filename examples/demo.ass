@@ -1,0 +1,19 @@
+[Script Info]
+Title: Synthetic demo for ai-subtitle-pipeline
+ScriptType: v4.00+
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Main,Arial,48,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,40,1
+Style: Captions,Arial,56,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,2,2,8,10,10,40,1
+Style: Warning,Arial,90,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,10,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:09.99,Warning,,0,0,0,,{\org(0,0)\fscx0\fscy0\clip(0,0,0,0)}Your media player does not support the subtitle format used in this episode.\Nhttps://example.com
+Dialogue: 0,0:00:10.00,0:00:13.00,Main,,0,0,0,,Hello there!
+Dialogue: 0,0:00:13.00,0:00:16.00,Main,,0,0,0,,This is a synthetic line.
+Dialogue: 0,0:00:16.00,0:00:19.00,Main,,0,0,0,,We are testing the pipeline.
+Dialogue: 0,0:00:20.00,0:00:24.00,Captions,,0,0,0,,{\an8\pos(960,300)\fscx125\fscy125}Courthouse

@@ -1,0 +1,17 @@
+name: validate-scripts
+on: [push, pull_request]
+jobs:
+  syntax:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Compile
+        run: python -m compileall -q scripts
+      - name: Smoke test
+        run: |
+          python scripts/dump_targets.py examples/demo.ass /tmp/targets.txt
+          python scripts/check_keys.py examples/demo.ass /tmp/targets.txt
+          python scripts/style_scan.py examples/demo.ass
